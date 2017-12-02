@@ -26,7 +26,11 @@
   <meta name="twitter:description" content="{{ page.description }}">
   <meta name="twitter:image" content="{{ thumb_image }}">
 
-  <link rel="apple-touch-icon" href="{% asset_path apple-touch-icon.png %}">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% asset_path apple-touch-icon-144x144.png %}" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{% asset_path apple-touch-icon-152x152.png %}" />
+  <link rel="icon" type="image/png" href="{% asset_path favicon-32x32.png %}" sizes="32x32" />
+  <link rel="icon" type="image/png" href="{% asset_path favicon-16x16.png %}" sizes="16x16" />
+
   <link href="{{ 'feed.xml' | absolute_url }}" type="application/rss+xml" rel="alternate" title="{{ site.name }} Last 10 blog posts" />
 
   {% if site.local_fonts %}
