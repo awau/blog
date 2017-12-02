@@ -5,7 +5,7 @@ install:
 - "./bin/setup"
 script:
 - bundle exec jekyll build --trace
-- bundle exec htmlproofer ./_site --only-4xx --allow-hash-href
+- bundle exec htmlproofer --assume-extension --only-4xx --url-ignore "https://blog.owo.cloud/feed.xml" --allow-hash-href ./_site
 after_success:
 - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && "./bin/automated"
 env:
