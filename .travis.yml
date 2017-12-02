@@ -1,13 +1,8 @@
 language: ruby
+cache: bundler
 rvm:
 - 2.4.1
-install:
-- "./bin/setup"
-script:
-- bundle exec jekyll build --trace
-- bundle exec htmlproofer --assume-extension --only-4xx --url-ignore "https://blog.owo.cloud/feed.xml" --allow-hash-href ./_site
-after_success:
-- ./bin/auto-deploy
+
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
@@ -15,3 +10,19 @@ env:
   - DEPLOY_GIT_EMAIL: dean@deansheather.com
   - DEPLOY_GIT_SOURCE_BRANCH: master
   - DEPLOY_GIT_BRANCH: gh-pages
+
+install:
+- ./bin/setup
+
+script:
+- bundle exec jekyll build --trace
+- bundle exec htmlproofer --assume-extension --only-4xx --url-ignore "https://blog.owo.cloud/feed.xml"
+  --allow-hash-href ./_site
+
+after_success:
+- openssl aes-256-cbc -K $encrypted_72dd57a3956f_key -iv $encrypted_72dd57a3956f_iv
+  -in deploy_key.enc -out deploy_key -d
+- chmod 600 ./deploy_key
+- eval `ssh-agent -s`
+- ssh-add ./deploy_key
+- ./bin/auto-deploy

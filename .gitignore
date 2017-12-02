@@ -14,3 +14,6 @@ yarn.lock
 vendor/bundle/
 .bundle/
 .ruby-version
+
+# Deploy key
+deploy_key
