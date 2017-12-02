@@ -1,0 +1,38 @@
+<footer class="footer {% if site.scrollappear_enabled %}scrollappear{% endif %}">
+  <p>
+    Breaking things,  testing in production, doing stupid stuff. This is the OwO
+    developers' blog, where we discuss code-related things. Also sometimes we
+    post memes or talk about non code-related things.
+  </p>
+
+  <p>
+    <a href="https://github.com/nielsenramon/chalk" rel="norefferer noopener" target="_blank" title="Chalk GitHub">Chalk</a>
+    blog template for Jekyll built by Nielsen Ramon.
+  </p>
+
+  <p>
+    <ul class="social-footer">
+      {% if site.social.email %}
+      <li>
+        <a href="mailto:{{ site.social.email }}" title="Email">{{ site.social.email }}</a>
+      </li>
+      {% endif %}
+
+      {% if site.social.github %}
+      <li>
+        <a href="https://github.com/{{ site.social.github }}" rel="noreferrer noopener" target="_blank" title="GitHub">
+          <svg class="icon-github"><use href="{% asset_path github.svg %}#icon-github" xlink:href="{% asset_path github.svg %}#icon-github"></use></svg> {{ site.social.github }}
+        </a>
+      </li>
+      {% endif %}
+
+      {% if site.social.twitter %}
+      <li>
+        <a href="https://twitter.com/{{ site.social.twitter }}" rel="noreferrer noopener" target="_blank" title="Twitter">
+          <svg class="icon-twitter"><use href="{% asset_path twitter.svg %}#icon-twitter" xlink:href="{% asset_path twitter.svg %}#icon-twitter"></use></svg> {{ site.social.twitter }}
+        </a>
+      </li>
+      {% endif %}
+    </ul>
+  </p>
+</footer>

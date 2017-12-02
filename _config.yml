@@ -1,0 +1,77 @@
+name: OwO Blog
+paginate: 8
+url: https://blog.owo.cloud
+
+blog_theme: dark
+
+baseurl:
+about_enabled: true
+discus_identifier:
+ga_analytics:
+local_fonts: false
+rss_enabled: true
+scrollappear_enabled: false # This thing is annoying
+social:
+  dribbble:
+  facebook:
+  flickr:
+  github: awau
+  linkedin:
+  twitter: whats__this
+  email: devs@whats-th.is
+  bitcoin:
+  ethereum:
+  gitlab:
+  youtube:
+  twitch:
+  discord: # Yeah, right.
+  tumblr:
+  bitbucket:
+  docker:
+  instagram:
+  keybase:
+  medium:
+  spotify:
+  stackoverflow:
+  steam:
+
+# Important settings (change at own risk)
+
+assets:
+  features:
+    automatic_img_size: false
+  sources:
+    - _assets/fonts
+    - _assets/icons
+    - _assets/images
+    - _assets/javascripts
+    - _assets/stylesheets
+    - _assets/yarn
+collections:
+  my_tags:
+    output: true
+    permalink: /tag/:slug/
+defaults:
+  -
+    scope:
+      path: ""
+      type: my_tags
+    values:
+      layout: articles_by_tag
+exclude:
+  - .travis.yml
+  - bin/*
+  - circle.yml
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - README.md
+  - vendor/
+  - yarn.lock
+plugins:
+  - jekyll-assets
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jemoji
+paginate_path: /posts/page/:num/
+permalink: posts/:slug

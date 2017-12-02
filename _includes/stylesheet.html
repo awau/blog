@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="{% asset_path '{{ include.path }}' %}">
+
+<!-- Theme overrides -->
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700,700i" rel="stylesheet">
+<style>
+  * {
+    font-family: "Roboto Mono", monospace !important;
+  }
+
+  /* Header */
+  .header-logo {
+    font-family: inherit;
+  }
+  .header-links li a {
+    text-decoration: none;
+  }
+  .header-links li a:hover {
+    color: #fff;
+  }
+
+  /* Content */
+  .about {
+    padding: 3em 0;
+  }
+
+  /* Footer */
+  .footer p {
+    margin-bottom: 1em;
+  }
+  .social-footer {
+    padding-left: 0;
+  }
+  .social-footer li {
+    padding-right: 1em;
+    display: inline-block;
+  }
+  .social-footer a svg {
+    width: 16px;
+    height: 16px;
+    fill: #d2cfcf;
+    vertical-align: middle;
+  }
+  .social-footer a:hover svg, .social-footer a:active svg {
+    fill: #ada8a8;
+  }
+</style>
