@@ -1,0 +1,16 @@
+language: ruby
+rvm:
+- 2.4.1
+install:
+- "./bin/setup"
+script:
+- bundle exec jekyll build --trace
+- bundle exec htmlproofer ./_site --only-4xx --allow-hash-href
+after_success:
+- test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && "./bin/automated"
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - USERNAME: Dean Sheather
+  - EMAIL: dean@deansheather.com
+  - secure: gKKoWsiBrdRLx2m7E4RNJWaMG9vGZXwd31dfpPttOHEUQ8+xrmgyvKIyVRCccpAFqQ23vxPNVUIV7RgcODvHcgsUZikf7fAfCoQ2U5ZzZNUwXL3rxfLmag5MtLaXUYonqr3Ndau32ixFAlE1g3WDEPRs4QGTmzK3tmTBp7Ko8OyG8tyuTM1MN2gryLREJBm8OSqv1TnzA0J8rRpeRrhajDDO/iwkxrCXLo0VBLZdwTkzxwJNx8xReyG9PwDl1zw6Sao1E1JTRfVrtbUT7RNOZrFrDyYmMV2Af6+5wiFzogYOClweV4VD7cnao3G9Xj/ZdlLu51pSAhN+srykOi8Vd/3ZzIzjUd1YYDpX2MFAYPUr++7MDij+BviZpOo4BydsNc5kiX2c/narvQhb0cI0iDYkafhI8wtKG5tf4rNG+2I+Iy9w+nONGsY1IXZ10+Wkv8alqnltwfioJBCu89gb8eSoqEj8GIXZuaCSpbFuhBCXXpO3ldsU3rexWMjx9DMWGMIeMQqjBLY1Yzv4x60KuYlJlmFQrsZeEB7gJQOCXRRfHNKNPLBsAyRL7yyl8149gfm+oLHGnTPh04Ek4CSOF9ge/fBHNLBTI//8/XSsglYeQYL613c0apxEcWE/lKWxSmnShK6MWr9GX9mJdY8CBv4cD3fFRmDnayKijz+MlY0=
