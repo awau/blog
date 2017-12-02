@@ -68,6 +68,9 @@ exclude:
   - README.md
   - vendor/
   - yarn.lock
+  - .gitignore
+  - deploy_key.enc
+  - deploy_key
 plugins:
   - jekyll-assets
   - jekyll-paginate
