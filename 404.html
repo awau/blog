@@ -1,39 +1,76 @@
----
-permalink: /404.html
-sitemap: false
----
-
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>{{ site.name }} | Page not found</title>
+  <title>OwO Blog | Page not found</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  {% if site.local_fonts %}
-    {% include stylesheet.html path="fonts" %}
-  {% endif %}
+  
 
-  {% if site.blog_theme == "light" %}
-    {% stylesheet notfound-light %}
-    {% include stylesheet.html path="notfound-light" %}
-  {% else %}
-    {% include stylesheet.html path="notfound-dark" %}
-  {% endif %}
+  
+    <link rel="stylesheet" href="/assets/notfound-dark.css">
+
+<!-- Theme overrides -->
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700,700i" rel="stylesheet">
+<style>
+  * {
+    font-family: "Roboto Mono", monospace !important;
+  }
+
+  /* Header */
+  .header-logo {
+    font-family: inherit;
+  }
+  .header-links li a {
+    text-decoration: none;
+  }
+  .header-links li a:hover {
+    color: #fff;
+  }
+
+  /* Content */
+  .about {
+    padding: 3em 0;
+  }
+
+  /* Footer */
+  .footer p {
+    margin-bottom: 1em;
+  }
+  .social-footer {
+    padding-left: 0;
+  }
+  .social-footer li {
+    padding-right: 1em;
+    display: inline-block;
+  }
+  .social-footer a svg {
+    width: 16px;
+    height: 16px;
+    fill: #d2cfcf;
+    vertical-align: middle;
+  }
+  .social-footer a:hover svg, .social-footer a:active svg {
+    fill: #ada8a8;
+  }
+</style>
+
+  
 </head>
 <body>
   <main class="notfound-wrapper">
     <div class="notfound-content">
-      <h1><a href="{{ '/' | relative_url }}" title="Back to homepage">{{ site.name }}</a></h1>
+      <h1><a href="/" title="Back to homepage">OwO Blog</a></h1>
       <p>
-        Looks like you got lost. Let's get you back to the <a href="{{ '/' | relative_url }}">homepage</a>!
+        Looks like you got lost. Let's get you back to the <a href="/">homepage</a>!
       </p>
     </div>
   </main>
 
-  {% unless site.local_fonts %}
-    {% include javascript.html path="webfonts" %}
-  {% endunless %}
+  
+    <script src="/assets/webfonts.js"></script>
+
+  
 </body>
 </html>

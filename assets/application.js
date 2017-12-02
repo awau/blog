@@ -1,4 +1,3 @@
-//= require_self
 
 $(function() {
   // ScrollAppear
