@@ -4,6 +4,16 @@ url: https://blog.owo.cloud
 
 blog_theme: dark
 
+authors:
+  aurieh:
+    name: Aurieh
+    link: https://github.com/aurieh
+    link_title: Aurieh's GitHub
+  deansheather:
+    name: Dean Sheather
+    link: https://github.com/deansheather
+    link_title: Dean's GitHub
+
 baseurl:
 about_enabled: true
 discus_identifier:
