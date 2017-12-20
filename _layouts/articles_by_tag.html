@@ -11,6 +11,13 @@ layout: default
         </a>
         <p>{{ post.description }}</p>
         <div class="article-list-footer">
+          <span class="article-list-author">
+            {% assign author = site.authors[post.author] %}
+            <a href="{{ author.link }}" title="{{ author.link_title }}">
+              {{ author.name }}
+            </a>
+          </span>
+          <span class="article-list-divider">-</span>
           <span class="article-list-date">
             {{ post.date | date: "%B %-d, %Y" }}
           </span>

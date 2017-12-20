@@ -10,7 +10,7 @@ authors:
     link: https://github.com/aurieh
     link_title: Aurieh's GitHub
   deansheather:
-    name: Dean Sheather
+    name: Dean
     link: https://github.com/deansheather
     link_title: Dean's GitHub
 
@@ -87,4 +87,4 @@ plugins:
   - jekyll-sitemap
   - jemoji
 paginate_path: /posts/page/:num/
-permalink: posts/:slug
+permalink: posts/:year-:month-:day-:slug

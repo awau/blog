@@ -1,0 +1,4 @@
+---
+slug: plans
+name: Plans
+---
