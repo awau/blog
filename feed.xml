@@ -6,5 +6,13 @@
     <link>https://blog.owo.cloud</link>
     <atom:link href="https://blog.owo.cloud/feed.xml" rel="self" type="application/rss+xml" />
     
+      <item>
+        <title>Plans for 2018</title>
+        <description>Our plans for the new year, celebrating OwO's birthday and the release of Yuri.im (and this blog).</description>
+        <pubDate>Wed, 20 Dec 2017 00:00:00 +0000</pubDate>
+        <link>https://blog.owo.cloud/posts/2017-12-20-plans-for-2018</link>
+        <guid isPermaLink="true">https://blog.owo.cloud/posts/2017-12-20-plans-for-2018</guid>
+      </item>
+    
   </channel>
 </rss>
